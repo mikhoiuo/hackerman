@@ -13,3 +13,5 @@ this is a VERY hard step, do not attempt if you're a beginner
 3. done
 # why do u have the tarball just right there in the repo idiot lmfaooo
 :( 
+# does this steal my information
+yes i am russian spy
