@@ -1,0 +1,80 @@
+#!/bin/bash
+
+# Collection of generic tech jargon
+jargon=(
+  "Initiating boot sequence."
+  "Establishing secure connection."
+  "Initiating packet transfer."
+  "Initiating data compression."
+  "Initiating encryption protocol."
+  "Establishing remote connection."
+  "Searching for target network."
+  "Initiating firewall bypass."
+  "Establishing secure shell connection."
+  "Initiating packet sniffing."
+  "Initiating ARP spoofing."
+  "Establishing command and control server."
+  "Searching for open ports."
+  "Scanning for vulnerabilities."
+  "Initiating brute force attack."
+  "Establishing reverse shell connection."
+  "Initiating keylogger."
+  "Initiating screenshot capture."
+  "Establishing network mapping."
+  "Initiating packet injection."
+  "Bypassing authentication protocols."
+  "Stealing network credentials."
+  "Initiating code execution."
+  "Establishing denial of service attack."
+  "Initiating directory traversal."
+  "Initiating buffer overflow attack."
+  "Establishing SQL injection attack."
+  "Initiating cross-site scripting."
+  "Stealing cookies."
+  "Initiating privilege escalation."
+  "Initiating rootkit deployment."
+  "Establishing backdoor access."
+  "Initiating worm deployment."
+  "Initiating clickjacking attack."
+  "Establishing man-in-the-middle attack."
+  "Stealing personal data."
+  "Establishing phishing attack."
+  "Initiating ransomware deployment."
+  "Initiating bitcoin mining."
+  "Stealing credit card information."
+  "Initiating spyware deployment."
+  "Establishing social engineering attack."
+  "Stealing corporate data."
+  "Initiating custom malware deployment."
+  "Establishing cyber espionage."
+  "Initiating DDoS attack."
+  "Stealing intellectual property."
+  "Establishing data exfiltration."
+  "Initiating malicious insider threat."
+  "Stealing trade secrets."
+  "Initiating supply chain attack."
+)
+
+# Collection of fake red errors
+errors=(
+  "ERROR: Network connection lost."
+  "ERROR: Remote host closed connection."
+  "ERROR: Connection timed out."
+  "ERROR: Authentication failure."
+  "ERROR: Encryption failure."
+  "ERROR: Firewall protection failure."
+  "ERROR: Security patch installation failed."
+)
+
+for i in "${jargon[@]}"; do
+  printf "\033[1;32m"
+  echo "$i" | pv -qL 20
+  sleep 0.1
+  # fake error with 1/25 chance
+  if [ $((RANDOM % 25)) == 0 ]; then
+    printf "\033[1;31m"
+    echo "${errors[$((RANDOM % ${#errors[@]}))]}" | pv -qL 20
+  fi
+done
+
+printf "\033[0m"
