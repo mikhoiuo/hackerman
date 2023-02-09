@@ -11,3 +11,5 @@ this is a VERY hard step, do not attempt if you're a beginner
 1. open terminal
 2. type in "hackerman"
 3. done
+# why do u have the tar.gz file just right there in the repo idiot lmfaooo
+:( 
